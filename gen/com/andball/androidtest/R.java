@@ -17,6 +17,10 @@ public final class R {
         public static final int abc_slide_out_top=0x7f040005;
     }
     public static final class attr {
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int SwipeBackLayoutStyle=0x7f010073;
         /**  Custom divider drawable to use for elements in the action bar. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -308,6 +312,29 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int dropdownListPreferredItemHeight=0x7f010048;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>0</td><td></td></tr>
+<tr><td><code>right</code></td><td>1</td><td></td></tr>
+<tr><td><code>bottom</code></td><td>2</td><td></td></tr>
+<tr><td><code>all</code></td><td>3</td><td></td></tr>
+</table>
+         */
+        public static final int edge_flag=0x7f01006f;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int edge_size=0x7f01006e;
         /**  The drawable to show in the button for expanding the activities overflow popup.
              <strong>Note:</strong> Clients would like to set this drawable
              as a clue about the action the chosen activity will perform. For
@@ -618,6 +645,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int selectableItemBackground=0x7f010019;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int shadow_bottom=0x7f010072;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int shadow_left=0x7f010070;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int shadow_right=0x7f010071;
         /**  How this item should display in the Action Bar, if present. 
          <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
@@ -858,10 +897,17 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f060002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f070003;
+        public static final int abc_search_url_text_holo=0x7f070008;
         public static final int abc_search_url_text_normal=0x7f070000;
         public static final int abc_search_url_text_pressed=0x7f070002;
         public static final int abc_search_url_text_selected=0x7f070001;
+        /**  androidColor 
+         */
+        public static final int androidColorA=0x7f070003;
+        public static final int androidColorB=0x7f070004;
+        public static final int androidColorC=0x7f070005;
+        public static final int androidColorD=0x7f070006;
+        public static final int androidColorE=0x7f070007;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -947,8 +993,7 @@ containing a value of this type.
  Minimum width of the search view text entry area. 
          */
         public static final int abc_search_view_text_min_width=0x7f08000c;
-        /**  Default screen margins, per the Android Design guidelines. 
-
+        /** 
          Example customization of dimensions originally defined in res/values/dimens.xml
          (such as screen margins) for screens with more than 820dp of available width. This
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
@@ -956,6 +1001,7 @@ containing a value of this type.
          */
         public static final int activity_horizontal_margin=0x7f080015;
         public static final int activity_vertical_margin=0x7f080016;
+        public static final int common_margin=0x7f080017;
         /**  The platform's desired fixed height for a dialog along the major axis
          (the screen is in portrait). This may be either a fraction or a dimension.
  The platform's desired fixed height for a dialog along the major axis
@@ -1084,77 +1130,92 @@ containing a value of this type.
         public static final int ic_drawer=0x7f02005b;
         public static final int ic_launcher=0x7f02005c;
         public static final int open=0x7f02005d;
+        public static final int shadow_bottom=0x7f02005e;
+        public static final int shadow_left=0x7f02005f;
+        public static final int shadow_right=0x7f020060;
     }
     public static final class id {
-        public static final int action_bar=0x7f05001c;
+        public static final int action_bar=0x7f050020;
         public static final int action_bar_activity_content=0x7f050015;
-        public static final int action_bar_container=0x7f05001b;
-        public static final int action_bar_overlay_layout=0x7f05001f;
-        public static final int action_bar_root=0x7f05001a;
-        public static final int action_bar_subtitle=0x7f050023;
-        public static final int action_bar_title=0x7f050022;
-        public static final int action_context_bar=0x7f05001d;
+        public static final int action_bar_container=0x7f05001f;
+        public static final int action_bar_overlay_layout=0x7f050023;
+        public static final int action_bar_root=0x7f05001e;
+        public static final int action_bar_subtitle=0x7f050027;
+        public static final int action_bar_title=0x7f050026;
+        public static final int action_context_bar=0x7f050021;
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
-        public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f050046;
-        public static final int activity_chooser_view_content=0x7f050025;
+        public static final int action_mode_close_button=0x7f050028;
+        public static final int action_settings=0x7f050052;
+        public static final int activity_chooser_view_content=0x7f050029;
+        public static final int all=0x7f05001d;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
-        public static final int checkbox=0x7f05002d;
+        public static final int bottom=0x7f05001c;
+        public static final int btn_finish=0x7f050049;
+        public static final int btn_start=0x7f050048;
+        public static final int checkbox=0x7f050031;
         public static final int collapseActionView=0x7f05000d;
-        public static final int content=0x7f050045;
-        public static final int default_activity_button=0x7f050028;
+        public static final int content=0x7f050051;
+        public static final int default_activity_button=0x7f05002c;
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
-        public static final int drawer_layout=0x7f05003d;
+        public static final int drawer_layout=0x7f050041;
         public static final int dropdown=0x7f05000f;
-        public static final int edit_query=0x7f050030;
+        public static final int edit_query=0x7f050034;
         public static final int end=0x7f050013;
-        public static final int expand_activities_button=0x7f050026;
-        public static final int expanded_menu=0x7f05002c;
-        public static final int fragment_layout=0x7f05003e;
+        public static final int expand_activities_button=0x7f05002a;
+        public static final int expanded_menu=0x7f050030;
+        public static final int fragment_layout=0x7f050042;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
-        public static final int icon=0x7f05002a;
+        public static final int icon=0x7f05002e;
         public static final int ifRoom=0x7f05000a;
-        public static final int image=0x7f050027;
+        public static final int image=0x7f05002b;
+        public static final int left=0x7f05001a;
         public static final int listMode=0x7f050001;
-        public static final int list_item=0x7f050029;
-        public static final int menu_layout_left=0x7f05003f;
-        public static final int menu_layout_right=0x7f050041;
-        public static final int menu_listView_l=0x7f050040;
-        public static final int menu_listView_r=0x7f050042;
+        public static final int list_item=0x7f05002d;
+        public static final int menu_layout_left=0x7f050043;
+        public static final int menu_layout_right=0x7f050045;
+        public static final int menu_listView_l=0x7f050044;
+        public static final int menu_listView_r=0x7f050046;
         public static final int middle=0x7f050012;
+        public static final int mode_all=0x7f05004e;
+        public static final int mode_bottom=0x7f05004d;
+        public static final int mode_left=0x7f05004b;
+        public static final int mode_right=0x7f05004c;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
-        public static final int radio=0x7f05002f;
-        public static final int search_badge=0x7f050032;
-        public static final int search_bar=0x7f050031;
-        public static final int search_button=0x7f050033;
-        public static final int search_close_btn=0x7f050038;
-        public static final int search_edit_frame=0x7f050034;
-        public static final int search_go_btn=0x7f05003a;
-        public static final int search_mag_icon=0x7f050035;
-        public static final int search_plate=0x7f050036;
-        public static final int search_src_text=0x7f050037;
-        public static final int search_voice_btn=0x7f05003b;
-        public static final int shortcut=0x7f05002e;
+        public static final int radio=0x7f050033;
+        public static final int right=0x7f05001b;
+        public static final int search_badge=0x7f050036;
+        public static final int search_bar=0x7f050035;
+        public static final int search_button=0x7f050037;
+        public static final int search_close_btn=0x7f05003c;
+        public static final int search_edit_frame=0x7f050038;
+        public static final int search_go_btn=0x7f05003e;
+        public static final int search_mag_icon=0x7f050039;
+        public static final int search_plate=0x7f05003a;
+        public static final int search_src_text=0x7f05003b;
+        public static final int search_voice_btn=0x7f05003f;
+        public static final int shortcut=0x7f050032;
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
         public static final int showTitle=0x7f050006;
-        public static final int sliding_layout=0x7f050043;
-        public static final int split_action_bar=0x7f05001e;
-        public static final int submit_area=0x7f050039;
-        public static final int swipe_refresh_widget=0x7f050044;
+        public static final int sliding_layout=0x7f050047;
+        public static final int split_action_bar=0x7f050022;
+        public static final int submit_area=0x7f05003d;
+        public static final int swipe=0x7f05004f;
+        public static final int swipe_refresh_widget=0x7f050050;
         public static final int tabMode=0x7f050002;
-        public static final int textView1=0x7f05003c;
-        public static final int title=0x7f05002b;
-        public static final int top_action_bar=0x7f050020;
-        public static final int up=0x7f050021;
+        public static final int textView1=0x7f050040;
+        public static final int title=0x7f05002f;
+        public static final int top_action_bar=0x7f050024;
+        public static final int tracking_mode=0x7f05004a;
+        public static final int up=0x7f050025;
         public static final int useLogo=0x7f050003;
         public static final int withText=0x7f05000c;
     }
@@ -1213,7 +1274,9 @@ containing a value of this type.
         public static final int second=0x7f03001a;
         public static final int slidingpanel=0x7f03001b;
         public static final int support_simple_spinner_dropdown_item=0x7f03001c;
-        public static final int swiperefresh=0x7f03001d;
+        public static final int swipeback_demo=0x7f03001d;
+        public static final int swipeback_layout=0x7f03001e;
+        public static final int swiperefresh=0x7f03001f;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
@@ -1261,9 +1324,16 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int action_settings=0x7f0a000f;
         public static final int app_name=0x7f0a000d;
+        public static final int finish_activity=0x7f0a0011;
         public static final int hello_world=0x7f0a000e;
-        public static final int pane_close=0x7f0a0011;
-        public static final int pane_open=0x7f0a0010;
+        public static final int key_tracking_mode=0x7f0a0012;
+        public static final int pane_close=0x7f0a0018;
+        public static final int pane_open=0x7f0a0017;
+        public static final int start_activity=0x7f0a0010;
+        public static final int tracking_mode_all=0x7f0a0016;
+        public static final int tracking_mode_bottom=0x7f0a0015;
+        public static final int tracking_mode_left=0x7f0a0013;
+        public static final int tracking_mode_right=0x7f0a0014;
     }
     public static final class style {
         /** 
@@ -1289,9 +1359,9 @@ containing a value of this type.
          */
         public static final int AppBaseTheme=0x7f0b008b;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0b008c;
+        public static final int SwipeBackLayout=0x7f0b008d;
         /**  Mimic text appearance in select_dialog_item.xml 
          */
         public static final int TextAppearance_AppCompat_Base_CompactMenu_Dialog=0x7f0b0063;
@@ -2953,6 +3023,93 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name com.andball.androidtest:spinnerMode
         */
         public static final int Spinner_spinnerMode = 7;
+        /** Attributes that can be used with a SwipeBackLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SwipeBackLayout_edge_flag com.andball.androidtest:edge_flag}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeBackLayout_edge_size com.andball.androidtest:edge_size}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeBackLayout_shadow_bottom com.andball.androidtest:shadow_bottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeBackLayout_shadow_left com.andball.androidtest:shadow_left}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeBackLayout_shadow_right com.andball.androidtest:shadow_right}</code></td><td></td></tr>
+           </table>
+           @see #SwipeBackLayout_edge_flag
+           @see #SwipeBackLayout_edge_size
+           @see #SwipeBackLayout_shadow_bottom
+           @see #SwipeBackLayout_shadow_left
+           @see #SwipeBackLayout_shadow_right
+         */
+        public static final int[] SwipeBackLayout = {
+            0x7f01006e, 0x7f01006f, 0x7f010070, 0x7f010071,
+            0x7f010072
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.andball.androidtest.R.attr#edge_flag}
+          attribute's value can be found in the {@link #SwipeBackLayout} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>0</td><td></td></tr>
+<tr><td><code>right</code></td><td>1</td><td></td></tr>
+<tr><td><code>bottom</code></td><td>2</td><td></td></tr>
+<tr><td><code>all</code></td><td>3</td><td></td></tr>
+</table>
+          @attr name com.andball.androidtest:edge_flag
+        */
+        public static final int SwipeBackLayout_edge_flag = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.andball.androidtest.R.attr#edge_size}
+          attribute's value can be found in the {@link #SwipeBackLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.andball.androidtest:edge_size
+        */
+        public static final int SwipeBackLayout_edge_size = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.andball.androidtest.R.attr#shadow_bottom}
+          attribute's value can be found in the {@link #SwipeBackLayout} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.andball.androidtest:shadow_bottom
+        */
+        public static final int SwipeBackLayout_shadow_bottom = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.andball.androidtest.R.attr#shadow_left}
+          attribute's value can be found in the {@link #SwipeBackLayout} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.andball.androidtest:shadow_left
+        */
+        public static final int SwipeBackLayout_shadow_left = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.andball.androidtest.R.attr#shadow_right}
+          attribute's value can be found in the {@link #SwipeBackLayout} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.andball.androidtest:shadow_right
+        */
+        public static final int SwipeBackLayout_shadow_right = 3;
         /**  These are the standard attributes that make up a complete theme. 
            <p>Includes the following attributes:</p>
            <table>
